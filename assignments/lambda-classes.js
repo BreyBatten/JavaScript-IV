@@ -59,7 +59,7 @@ class ProjectManager extends Instructor {
     }
 }
 
-
+// Student Objects
 const brey = new Student({
     name: 'Brey',
     location: 'Virginia',
@@ -72,3 +72,20 @@ const brey = new Student({
 console.log(brey);
 console.log(brey.speak());
 console.log(brey.listsSubjects(brey.favSubjects));
+console.log(brey.PRAssignment('JavaScript-IV'));
+console.log(brey.sprintChallenge('JavaScript-IV'));
+
+const john = new Student ({
+    name: 'John',
+    location: 'Raleigh',
+    age: 30,
+    gender: 'male',
+    previousBackground: 'Personal Trainer',
+    className: 'WEBPT5',
+    favSubjects: ['JavaScript', 'React', 'Ruby']
+});
+console.log(john);
+console.log(john.speak());
+console.log(john.listsSubjects(john.favSubjects));
+console.log(john.PRAssignment('JavaScript-IV'));
+console.log(john.sprintChallenge('JavaScript-IV'));
