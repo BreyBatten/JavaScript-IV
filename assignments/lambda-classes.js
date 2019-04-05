@@ -89,3 +89,30 @@ console.log(john.speak());
 console.log(john.listsSubjects(john.favSubjects));
 console.log(john.PRAssignment('JavaScript-IV'));
 console.log(john.sprintChallenge('JavaScript-IV'));
+
+// Instructor Objects
+const dave = new Instructor({
+    name: 'Dave',
+    location: 'Utah',
+    age: 39,
+    gender: 'male',
+    specialty: 'JavaScript',
+    favLanguage: 'JavaScript',
+    catchPhrase: "I don't remember what 'this' is."
+});
+console.log(dave);
+console.log(dave.demo('JavaScript Fundamentals'));
+console.log(dave.grade(brey, 'JavaScript'));
+
+const jane = new Instructor({
+    name: 'Jane',
+    location: 'San Fransisco',
+    age: 33,
+    gender: 'female',
+    specialty: 'C',
+    favLanguage: 'C',
+    catchPhrase: "I 'C' what you did there!"
+});
+console.log(jane);
+console.log(jane.demo('Python'));
+console.log(jane.grade(john, 'React'));
