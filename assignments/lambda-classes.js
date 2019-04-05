@@ -51,10 +51,10 @@ class ProjectManager extends Instructor {
         this.gradClassName = pmAttrs.gradClassName;
         this.favInstructor = pmAttrs.favInstructor;
     }
-    standUp(channel) {
-        return `${this.name} announces to ${channel}, @channel standup time!`
+    standUp(name, channel) {
+        return `${this.name} announces to ${channel}, "@channel standup time!"`
     }
-    debugsCode(student, subject) {
+    debugsCode(name, student, subject) {
         return `${this.name} debugs ${student.name}'s code on ${subject}. `
     }
 }
@@ -116,3 +116,30 @@ const jane = new Instructor({
 console.log(jane);
 console.log(jane.demo('Python'));
 console.log(jane.grade(john, 'React'));
+
+// Project Manager Objects
+const leo = new ProjectManager({
+    name: 'Leo',
+    location: 'Seattle',
+    age: 27,
+    gender: 'male',
+    specialty: 'React',
+    gradClassName: 'WEBFT2',
+    favInstructor: 'Jane'
+});
+console.log(leo);
+console.log(leo.standUp(leo, 'webpt5_sprint03'));
+console.log(leo.debugsCode(leo, brey, 'JavaScript'));
+
+const tatum = new ProjectManager({
+    name: 'Tatum',
+    location: 'California',
+    age: 28,
+    gender: 'male',
+    specialty: 'CSS',
+    gradClassName: 'CS1',
+    favInstructor: 'Heather'
+});
+console.log(tatum);
+console.log(tatum.standUp(tatum, 'webpt5_fri'));
+console.log(tatum.debugsCode(tatum, john, 'React'));
